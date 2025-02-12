@@ -1,3 +1,4 @@
+//не используется
 import { nameCityBlock, render, checkLove } from "./ui.js";
 import { getWeather, getForecastWeather } from "./requests.js";
 import { KEYS } from "./keys.js";
