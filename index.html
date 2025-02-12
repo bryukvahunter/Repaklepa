@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NE UNIVAEM</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nullstyles.css" />
+    <link
+      rel="shortcut icon"
+      href="https://i-ekb.ru/wp-content/uploads/2014/12/safari-new-yosemeteicon.jpg"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap");
+    </style>
+    <script defer type="module" src="main.js"></script>
+    <script defer type="module" src="ui.js"></script>
+    <script defer type="module" src="localStorage.js"></script>
+    <script defer type="module" src="requests.js"></script>
+    <script defer type="module" src="keys.js"></script>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="common-block" class="common">
+        <form action="" id="block-form" class="form">
+          <input
+            class="input"
+            type="text"
+            name=""
+            id="input-name"
+            placeholder="Enter city"
+            required
+          />
+          <button id="find" class="baton-find">
+            <svg
+              width="23"
+              height="23"
+              viewBox="0 0 23 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.54"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16.3775 14.5H15.385L15.04 14.1575C16.2588 12.7363 17 10.8938 17 8.87502C17 4.38752 13.3625 0.750021 8.875 0.750021C4.3875 0.750021 0.75 4.38752 0.75 8.87502C0.75 13.3625 4.3875 17 8.875 17C10.8938 17 12.735 16.26 14.1563 15.0425L14.5013 15.385V16.375L20.7488 22.6138L22.6125 20.75L16.3775 14.5ZM8.87501 14.5C5.76751 14.5 3.25001 11.9825 3.25001 8.87502C3.25001 5.76877 5.76751 3.25002 8.87501 3.25002C11.9813 3.25002 14.5 5.76877 14.5 8.87502C14.5 11.9825 11.9813 14.5 8.87501 14.5Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+        </form>
+        <div id="block-under-form" class="under-form">
+          <ul id="block-city-info" class="city-info-block">
+            <li id="city-name" class="city-name"></li>
+            <label class="check">
+              <input class="check-input" type="checkbox" />
+              <span class="check-box"></span>
+            </label>
+            <li class="temp-img-block">
+              <div class="temp" id="temperature">14</div>
+              <div class="img-block">
+                <img
+                  class="img"
+                  id="pic"
+                  src="https://s3-alpha-sig.figma.com/img/d48c/945e/ab15302d8988f8eae8fe7ba47f891ff3?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hu4tvgkLQ1WsW~TOQ7gWW3-~E4dWkeuY~fpguuPeMRcYKHm6-9Yj5f396ycxxgAq56y6faPuQFVSlAlv31v91yMv5EXfOGHb-d1cQly7n1GyaOe1xwGDHTkeC0hSKyuBUT4tAbjWS-migiWTXsL3cVoqsw7~KW54eI3fKAdAlfPB9W5Pz3KxbxoL7cv28S5tmej~AnVbGbRxLNeRnnqgXz9OQ57rEzGEm0VdAVRwV~tU-4eG4iQkUFaU1iUnIG9BN1M0cRyheVFC8YwvkHQfjptXEd4oJyocIjydmnmadij9aJdX4IbmwIaQ6SGYd5Fg0Vhx-pcdb6rBotUBsLpR2A__"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li id="temp-info-block" class="temp-info">
+              <div id="feels-like-main" class="temper-info-text">
+                Feels like: 10
+              </div>
+              <div id="sunrise" class="temper-info-text">Sunrise: 03:21</div>
+              <div id="sunset" class="temper-info-text">Sunset: 18:54</div>
+            </li>
+            <li id="time-12-00-block" class="time-12-00">
+              <div id="three-hours-title" class="time-temper">12:00</div>
+              <div id="three-hours-temp" class="time-info-text">
+                Temperature: 13
+              </div>
+              <div id="three-hours-feelslike" class="time-info-text">
+                Feels like: 11
+              </div>
+              <div class="img-block-12-00">
+                <img
+                  id="three-hours-pic"
+                  class="img"
+                  src="https://s3-alpha-sig.figma.com/img/d48c/945e/ab15302d8988f8eae8fe7ba47f891ff3?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hu4tvgkLQ1WsW~TOQ7gWW3-~E4dWkeuY~fpguuPeMRcYKHm6-9Yj5f396ycxxgAq56y6faPuQFVSlAlv31v91yMv5EXfOGHb-d1cQly7n1GyaOe1xwGDHTkeC0hSKyuBUT4tAbjWS-migiWTXsL3cVoqsw7~KW54eI3fKAdAlfPB9W5Pz3KxbxoL7cv28S5tmej~AnVbGbRxLNeRnnqgXz9OQ57rEzGEm0VdAVRwV~tU-4eG4iQkUFaU1iUnIG9BN1M0cRyheVFC8YwvkHQfjptXEd4oJyocIjydmnmadij9aJdX4IbmwIaQ6SGYd5Fg0Vhx-pcdb6rBotUBsLpR2A__"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li id="time-15-00-block" class="time-15-00">
+              <div id="six-hours-title" class="time-temper">15:00</div>
+              <div id="six-hours-temp" class="time-info-text">
+                Temperature: 11
+              </div>
+              <div id="six-hours-feelslike" class="time-info-text">
+                Feels like: 10
+              </div>
+              <div class="img-block-15-00">
+                <img
+                  id="six-hours-pic"
+                  class="img"
+                  src="https://s3-alpha-sig.figma.com/img/d48c/945e/ab15302d8988f8eae8fe7ba47f891ff3?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hu4tvgkLQ1WsW~TOQ7gWW3-~E4dWkeuY~fpguuPeMRcYKHm6-9Yj5f396ycxxgAq56y6faPuQFVSlAlv31v91yMv5EXfOGHb-d1cQly7n1GyaOe1xwGDHTkeC0hSKyuBUT4tAbjWS-migiWTXsL3cVoqsw7~KW54eI3fKAdAlfPB9W5Pz3KxbxoL7cv28S5tmej~AnVbGbRxLNeRnnqgXz9OQ57rEzGEm0VdAVRwV~tU-4eG4iQkUFaU1iUnIG9BN1M0cRyheVFC8YwvkHQfjptXEd4oJyocIjydmnmadij9aJdX4IbmwIaQ6SGYd5Fg0Vhx-pcdb6rBotUBsLpR2A__"
+                  alt=""
+                />
+              </div>
+            </li>
+            <li id="time-18-00-block" class="time-18-00">
+              <div id="nine-hours-title" class="time-temper">18:00</div>
+              <div id="nine-hours-temp" class="time-info-text">
+                Temperature: 11
+              </div>
+              <div id="nine-hours-feelslike" class="time-info-text">
+                Feels like: 10
+              </div>
+              <div class="img-block-18-00">
+                <img
+                  id="nine-hours-pic"
+                  class="img"
+                  src="https://s3-alpha-sig.figma.com/img/d48c/945e/ab15302d8988f8eae8fe7ba47f891ff3?Expires=1737331200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hu4tvgkLQ1WsW~TOQ7gWW3-~E4dWkeuY~fpguuPeMRcYKHm6-9Yj5f396ycxxgAq56y6faPuQFVSlAlv31v91yMv5EXfOGHb-d1cQly7n1GyaOe1xwGDHTkeC0hSKyuBUT4tAbjWS-migiWTXsL3cVoqsw7~KW54eI3fKAdAlfPB9W5Pz3KxbxoL7cv28S5tmej~AnVbGbRxLNeRnnqgXz9OQ57rEzGEm0VdAVRwV~tU-4eG4iQkUFaU1iUnIG9BN1M0cRyheVFC8YwvkHQfjptXEd4oJyocIjydmnmadij9aJdX4IbmwIaQ6SGYd5Fg0Vhx-pcdb6rBotUBsLpR2A__"
+                  alt=""
+                />
+              </div>
+            </li>
+          </ul>
+          <ul id="added-locations" class="add-loc-block">
+            <li class="title-add">Added Locations:</li>
+            <ul class="added-cities" id="add-city"></ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

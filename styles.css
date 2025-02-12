@@ -1,0 +1,225 @@
+.container {
+  max-width: 621px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 50px;
+}
+
+/* .common {
+  
+} */
+
+.form {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  justify-content: space-between;
+}
+
+.input {
+  outline: none;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  width: 100%;
+}
+
+.baton-find {
+  /* background-image: url("https://novosibirsk.ferraantikor.ru/img/logo/search.png"); */
+  /* background-size: cover; */
+  /* width: 20px; */
+  height: 20px;
+}
+
+.under-form {
+  display: flex;
+  border: 2px solid black;
+}
+
+.city-info-block {
+  width: 300px;
+  border-right: 2px solid black;
+  position: relative;
+}
+
+.add-loc-block {
+  width: 300px;
+}
+
+.city-name {
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33px;
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.check-input {
+  appearance: none;
+}
+
+.check-box {
+  width: 26px;
+  height: 25px;
+  position: absolute;
+  left: 245px;
+  top: 24px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6dLkHelJefeQKsXiPuF8M4HXhe5orif9s7aBQY4XJkLMbH86CynSIKIjIiq2s-TZwdLo&usqp=CAU");
+  background-size: cover;
+}
+
+.check-input:checked + .check-box {
+  background-image: url("https://static.vecteezy.com/system/resources/previews/027/875/990/non_2x/heart-design-free-vector.jpg");
+}
+
+.temp-img-block {
+  display: flex;
+}
+
+.temp {
+  font-family: Roboto;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 82px;
+  padding-left: 15px;
+}
+
+.img-block {
+  width: 64px;
+  height: 64px;
+  /* margin-top: 5px; */
+  margin-left: 1px;
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.temp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.temper-info-text {
+  font-family: Roboto;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.time-12-00 {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+
+.time-info-text {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding-left: 10px;
+}
+
+.time-temper {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+.img-block-12-00 {
+  width: 35px;
+  height: 33px;
+  position: absolute;
+  left: 229px;
+  bottom: 227px;
+}
+
+.time-15-00 {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid black;
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+
+.img-block-15-00 {
+  width: 35px;
+  height: 33px;
+  position: absolute;
+  left: 229px;
+  bottom: 127px;
+}
+
+.time-18-00 {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.img-block-18-00 {
+  width: 35px;
+  height: 33px;
+  position: absolute;
+  left: 229px;
+  bottom: 25px;
+}
+
+/* .degree {
+  border: 4px solid black;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  position: absolute;
+  left: 102px;
+  top: 35px;
+} */
+
+.title-add {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 20px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+
+.added-cities {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.city {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+}
