@@ -11,11 +11,14 @@ const weatherUrl = "http://api.openweathermap.org/data/2.5/weather";
 const forecastWeatherUrl = "http://api.openweathermap.org/data/2.5/forecast";
 const apiKey = "dbabf5a0105688896566a862f8914f66";
 
+// можно просто в константу добавить
 function getUrl(url, name, api) {
   const newUrl = `${url}?q=${name}&appid=${api}&units=metric`;
   return newUrl;
 }
 
+// лишняя функция
+// если хочешь можешь сделать общую функцию для get запросов
 async function getFetchWeather(name) {
   try {
     const response = await fetch(getUrl(weatherUrl, name, apiKey));
