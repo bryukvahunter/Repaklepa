@@ -1,8 +1,3 @@
-//не используется
-import { nameCityBlock, render, checkLove } from "./ui.js";
-import { getWeather, getForecastWeather } from "./requests.js";
-import { KEYS } from "./keys.js";
-
 export function checkNullLocalStorage(item) {
   const getItem = localStorage.getItem(item) === null;
   return getItem;

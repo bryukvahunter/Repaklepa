@@ -1,5 +1,5 @@
 import { getItemLocalStorage } from "./localStorage.js";
-import { KEYS } from "./keys.js";
+import { KEYS } from "./constants.js";
 
 export const findForm = document.querySelector("#block-form"),
   inputName = document.querySelector("#input-name"),

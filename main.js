@@ -1,20 +1,5 @@
-/*
-
-Задачи
-
-1. Переработать\заменить функцию checkItemLocalStorage(item) +
-2. Изменить функцию инициализации по замечаниям Игоря +
-3. Разобратсья с setItemLocalStotage в fetch(видео) +
-4. Сделать местное время в прогнозе на 3-6-9 часов +
-5. Уменьшить функцию getSunMoveTime() +
-6. Посмотреть new Intl.DateTimeFormat и попробовать переделать под него часть кода +
-7. Починить иконки в хроме и фаерфоксе (+) и разобраться с svg картинками (-)
-8. Скачать обс или бандикам +
-
-*/
-
 import { getWeather, getForecastWeather } from "./requests.js";
-import { KEYS } from "./keys.js";
+import { KEYS, DEFAULT_CITY } from "./constants.js";
 import {
   findForm,
   inputName,
@@ -29,12 +14,7 @@ import {
   showLocalStotage,
   setItemLocalStorage,
   getItemLocalStorage,
-  checkNullLocalStorage,
 } from "./localStorage.js";
-
-const DEFAULT_CITY = {
-  SAINT_P: "Saint Petersburg",
-};
 
 function doInitialization() {
   if (
