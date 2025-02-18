@@ -32,6 +32,7 @@ export function render() {
 //     console.log(i);
 //     return render(i + 1);
 //   }
+// }
 
 export function clean() {
   let allCities = document.querySelectorAll(".city");
