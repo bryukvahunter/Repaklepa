@@ -21,6 +21,18 @@ export function render() {
   });
 }
 
+//РЕКУРСИЯ ПИЗЗДЕЦ НАХУЙ БЛЯЬТ
+// export function render(i = 0) {
+//   const localStorageActualArray = getItemLocalStorage(KEYS.ADDED_CITIES);
+//   let arrLength = localStorageActualArray.length;
+//   if (i > arrLength) {
+//     return arrLength;
+//   } else {
+//     addCityBlock.appendChild(createElement(localStorageActualArray[i]));
+//     console.log(i);
+//     return render(i + 1);
+//   }
+
 export function clean() {
   let allCities = document.querySelectorAll(".city");
   for (let i = 0; i < allCities.length; i++) {
