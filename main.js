@@ -50,7 +50,8 @@ findForm.addEventListener("submit", findCity);
 function addCity() {
   if (this.checked) {
     const localStorageArrayCities = getItemLocalStorage(KEYS.ADDED_CITIES);
-    localStorageArrayCities.push(getItemLocalStorage(KEYS.CURRENT_CITY));
+    const localStorageCurrentCity = getItemLocalStorage(KEYS.CURRENT_CITY);
+    localStorageArrayCities.push(localStorageCurrentCity);
     const newSetAddedCities = new Set(localStorageArrayCities);
     setItemLocalStorage(KEYS.ADDED_CITIES, [...newSetAddedCities]);
   } else {
